@@ -46,11 +46,23 @@
       line-height: 1.6;
     }
 
-    .cta {
+    form {
       margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
     }
 
-    .cta button {
+    input[type="email"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      width: 280px;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       border: none;
@@ -61,35 +73,27 @@
       cursor: pointer;
     }
 
-    <footer>
-  <div class="socials">
-    <a href="https://www.facebook.com/share/1AutSLTVSJ/" target="_blank">
-      <img src="facebook-icon.png" alt="Facebook">
-    </a>
-  </div>
-  <div class="email">
-    <a href="mailto:info@rudicoach.com">info@rudicoach.com</a>
-  </div>
-</footer>
-
-
+    footer {
       margin-top: 3rem;
       text-align: center;
     }
 
     .socials {
-      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .socials img {
       width: 32px;
-      margin: 0 auto;
       display: block;
+      margin: 0 auto;
     }
 
-    .email {
-      margin-top: 0.5rem;
+    .email a {
       color: #aaa;
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 0.5rem;
     }
 
     @media (max-width: 600px) {
@@ -108,26 +112,4 @@
   </style>
 </head>
 <body>
-  <img src="rudi-logo.png" alt="Rudi Logo" class="logo" />
-  <h1>Rudi™ — The AI Percussion Coach</h1>
-  <h2>Built by percussionists. Powered by AI. Launching soon.</h2>
-
-  <div class="blurb">
-    Rudi helps young musicians improve faster by analyzing hand movements and giving real-time feedback.  
-    Coaches can integrate it into sessions to speed up progress and ensure every student gets the attention they need.
-  </div>
-
-  <div class="cta">
-    <button>Be the first to know! Notify Me!</button>
-  </div>
-
-  <footer>
-    <div class="socials">
-      <a href="https://www.facebook.com/share/1AutSLTVSJ/" target="_blank">
-        <img src="facebook-icon.png" alt="Facebook">
-      </a>
-    </div>
-    <div class="email">info@rudicoach.com</div>
-  </footer>
-</body>
-</html>
+  <img src="rudi-logo.png" alt="Rudi Logo" class
