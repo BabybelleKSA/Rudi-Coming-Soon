@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rudi™ — Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('bg-falling-sticks.gif');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      max-width: 300px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .blurb {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    input[type="email"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      width: 280px;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .socials {
+      margin-bottom: 0.5rem;
+    }
+
+    .socials img {
+      width: 32px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .email a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 200px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="rudi-logo.png" alt="Rudi Logo" class="logo" />
+  <h1>Rudi™ — The AI Percussion Coach</h1>
+  <h2>Built by percussionists. Powered by AI. Launching soon.</h2>
+
+  <div class="blurb">
+    Rudi helps young musicians improve faster by analyzing hand movements and giving real-time feedback.  
+    Coaches can integrate it into sessions to speed up progress and ensure every student gets the attention they need.
+  </div>
+
+  <!-- Email signup form -->
+  <form action="https://formspree.io/f/yourFormID" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Be the first to know! Notify Me!</button>
+  </form>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.facebook.com/share/1AutSLTVSJ/" target="_blank">
+        <img src="facebook-icon.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="email">
+      <a href="mailto:info@rudicoach.com">info@rudicoach.com</a>
+    </div>
+  </footer>
+</body>
+</html>
