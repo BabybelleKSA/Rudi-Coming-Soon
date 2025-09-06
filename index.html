@@ -140,3 +140,56 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rudi – Coming Soon</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body, html { height:100%; font-family:system-ui, sans-serif; }
+
+    /* Video background */
+    .bg-video {
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      z-index:-1; /* push behind content */
+    }
+
+    /* Overlay content */
+    .overlay {
+      position:relative;
+      z-index:1;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.4); /* darken for text readability */
+      color:#fff;
+      text-align:center;
+      padding:20px;
+    }
+    h1 { font-size:3rem; margin-bottom:1rem; color:#d4af37; }
+    p  { font-size:1.2rem; max-width:600px; }
+  </style>
+</head>
+<body>
+
+  <!-- Background looping video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="overlay">
+    <h1>Rudi™</h1>
+    <p>Precision in Motion. Our AI percussion coach is almost here. Stay tuned!</p>
+  </div>
+
+</body>
+</html>
+
