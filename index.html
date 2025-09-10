@@ -5,59 +5,55 @@
   <title>Rudi – Coming Soon</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body, html { height:100%; font-family:system-ui, sans-serif; }
+    body, html { height:100%; font-family:system-ui, sans-serif; background:#0a0a0a; color:#fff; }
 
     .container {
-      display:flex;
-      height:100vh;
-      width:100%;
-      flex-direction:row;
-    }
-
-    /* Left side: video */
-    .video-half {
-      flex:1;
-      position:relative;
-      overflow:hidden;
-    }
-    .video-half video {
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    /* Right side: overlay text + form */
-    .text-half {
-      flex:1;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      background:#0a0a0a;
-      color:#fff;
-      padding:40px;
+      max-width:800px;
+      margin:0 auto;
+      padding:40px 20px;
       text-align:center;
     }
 
-    .text-half h1 {
-      font-size:3rem;
-      color:#d4af37; /* brand gold */
-      margin-bottom:1rem;
-    }
-    .text-half p {
-      font-size:1.25rem;
-      max-width:400px;
-      line-height:1.5;
+    /* Logo */
+    #logo {
+      width:100px;
+      height:auto;
+      display:block;
+      margin:0 auto 30px;
     }
 
-    /* Signup form styling */
+    /* Video */
+    .video-wrapper {
+      display:flex;
+      justify-content:center;
+      margin-bottom:30px;
+    }
+    .video-wrapper video {
+      max-width:100%;
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Blurb */
+    .blurb {
+      font-size:1.2rem;
+      line-height:1.6;
+      max-width:600px;
+      margin:0 auto 30px;
+      color:#ddd;
+    }
+    .blurb span {
+      color:#d4af37; /* gold highlight */
+      font-weight:600;
+    }
+
+    /* Signup form */
     form {
-      margin-top:20px;
       display:flex;
       flex-direction:column;
       gap:12px;
-      width:100%;
       max-width:320px;
+      margin:0 auto;
     }
     form input[type="email"] {
       padding:12px;
@@ -75,53 +71,43 @@
       font-size:1rem;
       cursor:pointer;
     }
-    form button:hover {
-      background:#b69105;
-    }
+    form button:hover { background:#b69105; }
 
-    /* Thank you message */
     .thank-you {
       margin-top:20px;
       font-size:1.1rem;
       color:#d4af37;
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .container { flex-direction:column; }
-      .video-half { height:50vh; }
-      .text-half { height:50vh; padding:20px; }
-      .text-half h1 { font-size:2rem; }
-      .text-half p { font-size:1rem; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- Left: background video -->
-    <div class="video-half">
+    <!-- Logo at top -->
+    <img src="rudi_logo.png" alt="Rudi Logo" id="logo">
+
+    <!-- Centered video -->
+    <div class="video-wrapper">
       <video autoplay muted loop playsinline>
-        <source src="Untitled video - Made with Clipchamp (14).mp4" type="video/mp4">
+        <source src="your-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
-    <!-- Right: text + signup form -->
-    <div class="text-half">
-      <h1>Rudi™</h1>
-      <p>Precision in Motion. Our AI percussion coach is almost here. Stay tuned!</p>
+    <!-- Blurb -->
+    <div class="blurb">
+      <p><span>Get Ready.</span> Rudi™ is the world’s first AI percussion coach, blending motion and audio analysis to give real-time, human-like feedback. 
+      We’re creating a movement where every student, anywhere, can grow with confidence.</p>
+    </div>
 
-      <!-- Signup form -->
-      <form id="signup-form" action="https://formspree.io/f/mjkvovgw" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
-      </form>
+    <!-- Subscribe form -->
+    <form id="signup-form" action="https://formspree.io/f/mjkvovgw" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Notify Me</button>
+    </form>
 
-      <!-- Thank you message (hidden by default) -->
-      <div id="thank-you" class="thank-you" style="display:none;">
-        🎉 Thanks! You’re on the list.
-      </div>
+    <div id="thank-you" class="thank-you" style="display:none;">
+      🎉 Thanks! You’re on the list.
     </div>
   </div>
 
@@ -144,20 +130,13 @@
           form.style.display = 'none';
           thankYou.style.display = 'block';
         } else {
-          alert("Oops! Something went wrong. Please try again.");
+          form.submit(); // fallback
         }
       } catch (err) {
-        alert("Network error. Please try again.");
+        form.submit(); // fallback
       }
     });
   </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
